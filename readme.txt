@@ -2,5 +2,4 @@ git is a distirbution version control system.
 git is free software.
 git has a mutable index called stage.
 git tracks changes.
-hello world.
-how to log in google title
+creating a new branch is quick.
