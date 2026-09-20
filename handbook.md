@@ -31,3 +31,17 @@ cd git
 2. clone到文件系统中的目录下，目录名为（远程repo的名字），带有.git
 git clone git@github.com:hl-matrix/gitskills.git
 3. 在git bash中cd到克隆的文件目录下执行本地操作
+## 分支操作
+1. 创建并切换分支
+git checkout -b dev
+git switch -c dev
+2. 查看分支
+git branch
+3. 切换分支
+git checkout master
+git switch master
+4. 合并分支
+git merge dev 
+5. 删除分支
+git branch -d dev
+
