@@ -1,5 +1,5 @@
-git操作手册
-# 本地repo的常规操作
+# git操作手册
+## 本地repo的常规操作
 1. 保存到暂存区
 git add file
 git add .
@@ -18,14 +18,14 @@ git reset --hard [commit id]
 git checkout -- file
 7. 从暂存区撤回
 git reset HEAD file
-# 由本地repo关联远程repo
+## 由本地repo关联远程repo
 1. 在github建立repo
 2. 在git bash相应目录下关联
 git remote add origin git@github.com:hl-matrix/learngit.git
 3. 将分支信息提交到远程repo
 git push -u origin master
 git push origin master
-# 建立远程repo，克隆到本地的文件系统中（保存有.git）
+## 建立远程repo，克隆到本地的文件系统中（保存有.git）
 1. 在git bash中cd到目标目录下
 cd git
 2. clone到文件系统中的目录下，目录名为（远程repo的名字），带有.git
