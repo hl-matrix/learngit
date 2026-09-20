@@ -1,5 +1,4 @@
-print('hello world!')
-for i in range(5):
-    print(i,end = ' ')
+nums = list(map(int,input().split()))
+for num in nums:
+    print(num,end=' ')
 print()
-print('my stupid boss')
