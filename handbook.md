@@ -44,4 +44,6 @@ git switch master
 git merge dev 
 5. 删除分支
 git branch -d dev
-
+6. 不同分支产生冲突时，无法合并，需要先解决冲突，再commit到主分支上。
+7. 查看分支合并图
+git log --graph
