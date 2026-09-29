@@ -1,4 +1,3 @@
-nums = list(map(int,input().split()))
-for num in nums:
-    print(num,end=' ')
-print()
+print('hello world!')
+print('hello git!')
+print('hello linux!')
