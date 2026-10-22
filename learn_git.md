@@ -14,3 +14,13 @@
 5. 提交并添加说明   
 `git commit -m "说明信息"`
 ## 二. 时光机穿梭
+### 操作步骤
+1. 版本库回退到之前的版本（commit id）  
+`git reset --hard (commit id)`  
+`git reset --hard HEAD^`  
+`git reset --hard HEAD~1`  
+2. 撤销修改  
+场景一: 在工作区修改,未stage到暂存区  
+`git restore file` -> 在工作区撤销修改  
+场景二: 在工作区修改,并且stage到暂存区,但还未commit  
+`git restore --storage file` -> 撤回add操作,保留在工作区的状态,依然是修改后的file,即回到场景一  
