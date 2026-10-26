@@ -48,3 +48,29 @@
 1. 在github新建一个远程库，即create a repo。
 2. 在本地克隆一个远程库，便于完成个人的模块化任务。  
 `git clone git@github.com:user's name/repo's name.git`  
+## 分支管理
+### 理念
+在团队协作的软件工程中，一般主干是稳定的，用于最终更新和提交软件版本，个人在主干外各自建立自己的分支，完成个人的模块化工作。
+### 操作步骤
+#### 分支的创建和合并
+1. 创建并转移到新的分支  
+`git switch -c dev`  
+注：参数-c，是--create的缩写  
+2. 观察创建的所有分支  
+`git branch`  
+3. 对于1的步骤同样可以拆解  
+建立新的分支但不切换  
+`git branch main`  
+切换到新的分支  
+`git switch main`  
+4. 删除分支  
+`git branch -d main`  
+注：参数-d，是--delete的缩写  
+5. 在分支中完成相关任务时，需要add和commit，因为git是记录修改；然后切换到主分支，再合并  
+**假设**：在dev分支中完成相关工作后，需要合并到主干master上，需要先切换到master主干上  
+git merge dev  
+注：默认是采用fast forward快速合并，结果是回看历史（git log）时，看不出切换分支，合并的显式操作过程，仍呈现出笔直的时间线。  
+6. 分支管理策略，不采用ff的快速合并  
+`git merge --no-ff -m "提交说明" dev`  
+注：可以显式的看出修改痕迹。  
+
