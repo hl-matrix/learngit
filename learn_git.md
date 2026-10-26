@@ -21,6 +21,17 @@
 `git reset --hard HEAD~1`  
 2. 撤销修改  
 场景一: 在工作区修改,未stage到暂存区  
-`git restore file` -> 在工作区撤销修改  
+`git restore file`  
+在工作区撤销修改  
 场景二: 在工作区修改,并且stage到暂存区,但还未commit  
-`git restore --storage file` -> 撤回add操作,保留在工作区的状态,依然是修改后的file,即回到场景一  
+`git restore --staged file`  
+撤回add操作,保留在工作区的状态,依然是修改后的file,即回到场景一  
+3. 删除文件  
+删除文件  
+`rm file`  
+场景一：希望删除  
+`git rm/add file`  
+`git commit -m "删除file"`  
+场景二：后悔删除，希望撤销  
+`git restore file`  
+前提：前面的版本已经在分支中，即已经commit过，在.git的track下  
