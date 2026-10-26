@@ -35,3 +35,16 @@
 场景二：后悔删除，希望撤销  
 `git restore file`  
 前提：前面的版本已经在分支中，即已经commit过，在.git的track下  
+## 远程仓库
+### 操作步骤
+#### 本地库 -> 远程库
+1. 在github建立远程仓库，即create a repo。
+2. 将本地库关联到远程仓库  
+`git remote add origin git@github.com:user's name/repo's name.git`  
+3. 初次推送内容时  
+`git push origin -u master`  
+注：参数-u，是指--set-upstream  
+#### 远程库 -> 本地库
+1. 在github新建一个远程库，即create a repo。
+2. 在本地克隆一个远程库，便于完成个人的模块化任务。  
+`git clone git@github.com:user's name/repo's name.git`  
