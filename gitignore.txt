@@ -1,0 +1,42 @@
+# === Windows ===
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msm
+*.msp
+*.lnk
+
+# === VS Code ===
+.vscode/
+!.vscode/extensions.json
+!.vscode/mcp.json
+*.code-workspace
+
+# === Java / JVM ===
+*.class
+*.jar
+*.war
+*.ear
+.mtj.tmp/
+hs_err_pid*
+*logFile*.log
+
+# === Next.js ===
+/.next/
+/out/
+next-env.d.ts
+.vercel
+/.pnp
+.pnp.js
+
+# === Maven ===
+target/
+.mvn/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+HELP.md
+pom.xml.versionsBackup

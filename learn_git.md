@@ -111,6 +111,16 @@ git merge dev
 `git rebase --continue`
 3. 重新push
 
+## 其他功能
+### 生成.gitignore
+在codingtool.dev的gitignore generator中下载。
+
+### 修改配置文件
+1. 本地的配置文件 .git/config
+2. 电脑的配置文件 .gitconfig
+3. `git config --global alias.缩写指令 子命令`  
+**案例**：`git cofig --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"`
+
 ## 补充说明
 1. 建立git服务器
 2. 使用GUI，SourceTree，可视乎操作，但感觉画蛇添足。
