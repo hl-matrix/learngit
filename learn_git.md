@@ -77,4 +77,40 @@ git merge dev
 #### 处理bug
 **场景**：我正在完成工作任务（离结束遥遥无期），但突然收到市场的紧急反馈，急需修复一个在master分支上的bug，此时我是在我创建的分支上完成我的工作，面临不能退出我的分支（因为在自己的分支上一定要add和commit再退出，不要徒增麻烦），又要在别的分支上修改的两难境遇。  
 **方法**：保存自己分支的断点现场，退出到别的分支完成任务后，再返回自己的分支，恢复现场后继续工作  
-1. 
+1. 保存现场  
+`git stash push  -u -m "说明"`  
+**注**：参数u，是指--include-untrack。
+2. 切换分支，完成相关任务，然后commit并merge，退回工作分支。
+3. 列出断点列表  
+`git stash list`  
+4. 选择一：  
+恢复最近现场，并从list中删除记录  
+`git stash pop`  
+选择二：  
+`git stash apply stash@{0}`  
+`git stash drop stash@{0}`
+
+## 标签管理
+### 操作步骤
+1. 书写标签  
+`git tag v1.0 "commit-id"` 
+2. 查看标签
+`git tag`  
+3. 删除标签  
+`git tag -d v1.0`  
+4. 推送到远程仓库  
+`git push origin v1.0`
+5. 删除远程仓库的标签  
+`git push origin --delete refs/tags/v1.0`
+
+## 推送远程库
+### 操作步骤
+1. push失败需要pull  
+`git pull --rebase`
+2. git diff发现冲突，需要手动修改，并add 
+`git rebase --continue`
+3. 重新push
+
+## 补充说明
+1. 建立git服务器
+2. 使用GUI，SourceTree，可视乎操作，但感觉画蛇添足。
